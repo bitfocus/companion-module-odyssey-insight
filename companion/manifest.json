@@ -1,7 +1,7 @@
 {
-	"id": "insight",
-	"name": "Insight Server",
-	"shortname": "Insight",
+	"id": "odyssey-insight",
+	"name": "odyssey-insight",
+	"shortname": "insight",
 	"description": "Insight server controller",
 	"version": "1.0.0",
 	"license": "MIT",
