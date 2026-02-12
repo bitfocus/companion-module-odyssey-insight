@@ -1,10 +1,10 @@
 import { Regex, type SomeCompanionConfigField } from '@companion-module/base'
 
 export interface ModuleConfig {
-	host:            string
-	authToken:       string
-	channelID:       number
-	refreshPeriod:   number,
+	host: string
+	authToken: string
+	channelID: number
+	refreshPeriod: number
 }
 
 export function GetConfigFields(): SomeCompanionConfigField[] {
@@ -21,7 +21,7 @@ export function GetConfigFields(): SomeCompanionConfigField[] {
 			id: 'authToken',
 			label: 'Authorization Key',
 			width: 400,
-			default: ''
+			default: '',
 		},
 		{
 			type: 'number',

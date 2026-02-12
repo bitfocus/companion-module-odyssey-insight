@@ -4,69 +4,65 @@ export function UpdateActions(self: ModuleInstance): void {
 	self.setActionDefinitions({
 		play_action: {
 			name: 'Play',
-			options: [
-			],
-//			callback: async (event) => {
+			options: [],
+			//			callback: async (event) => {
 			callback: async () => {
-				self.sendCommand('Play');
+				self.sendCommand('Play')
 			},
 		},
 		stop_action: {
 			name: 'Stop',
-			options: [
-			],
+			options: [],
 			callback: async () => {
-				self.sendCommand('Stop');
+				self.sendCommand('Stop')
 			},
 		},
 		previous_action: {
 			name: 'Previous',
-			options: [
-			],
+			options: [],
 			callback: async () => {
-				self.sendCommand('Previous');
+				self.sendCommand('Previous')
 			},
 		},
 		next_action: {
 			name: 'Next',
-			options: [
-			],
+			options: [],
 			callback: async () => {
-				self.sendCommand('Next');
+				self.sendCommand('Next')
 			},
 		},
 		pause_action: {
 			name: 'Pause',
-			options: [
-			],
+			options: [],
 			callback: async () => {
-				self.sendCommand('Pause');
+				self.sendCommand('Pause')
 			},
 		},
 		cue_action: {
 			name: 'Cue',
-			options: [
-			],
+			options: [],
 			callback: async () => {
-				self.sendCommand('Cue');
+				self.sendCommand('Cue')
 			},
 		},
 		updateStatus_action: {
 			name: 'Status',
-			options: [
-			],
+			options: [],
 			callback: async () => {
-				self.requestCommand('Status')
-					.then(response => { 
+				self.requestCommand('Status').then(
+					(response) => {
 						self.log('info', `status is ${response.data.Status}`)
 						self.setVariableValues({
 							channelStatus: response.data.Status,
-							channelName:   response.data.Name
+							channelName: response.data.Name,
 						})
-						self.checkFeedbacks('insightStatusPlay', 'insightStatusCue', 'insightStatusStop');
-					})
+						self.checkFeedbacks('insightStatusPlay', 'insightStatusCue', 'insightStatusStop')
+					},
+					(_reject) => {
+						self.log('error', 'Status action failed.')
+					},
+				)
 			},
 		},
 	})
 }
-
