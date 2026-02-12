@@ -5,8 +5,8 @@
 	"description": "Insight server controller",
 	"version": "1.0.0",
 	"license": "MIT",
-	"repository": "git+https://github.com/bitfocus/odyssey-insight.git",
-	"bugs": "https://github.com/bitfocus/odyssey-insight/issues",
+	"repository": "git+https://github.com/bitfocus/companion-module-odyssey-insight.git",
+	"bugs": "https://github.com/bitfocus/companion-module-odyssey-insight/issues",
 	"maintainers": [
 		{
 			"name": "Odyssey Development",
