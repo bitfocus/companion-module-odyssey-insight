@@ -7,6 +7,7 @@ import { UpdateFeedbacks } from './feedbacks.js'
 import { UpdatePresets } from './presets.js'
 import axios, { AxiosError, AxiosResponse } from 'axios'
 
+
 type InsightStatus = 'Playing' | 'Cued' | 'Stopped' | 'Disconnected'
 
 export class ModuleInstance extends InstanceBase<ModuleConfig> {
@@ -119,7 +120,7 @@ export class ModuleInstance extends InstanceBase<ModuleConfig> {
 
 	async initializeStatusUpdate(): Promise<void> {
 		this.statusUpdateHandle = setInterval(() => {
-			(async () => {
+			;(async () => {
 				try {
 					if (this.updateRequestInProgress == false) {
 						this.updateRequestInProgress = true
