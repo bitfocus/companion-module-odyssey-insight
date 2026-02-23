@@ -7,7 +7,6 @@ import { UpdateFeedbacks } from './feedbacks.js'
 import { UpdatePresets } from './presets.js'
 import axios, { AxiosError, AxiosResponse } from 'axios'
 
-
 type InsightStatus = 'Playing' | 'Cued' | 'Stopped' | 'Disconnected'
 
 export class ModuleInstance extends InstanceBase<ModuleConfig> {
