@@ -36,7 +36,6 @@ export class ModuleInstance extends InstanceBase<ModuleConfig> {
 	// When module gets deleted
 	async destroy(): Promise<void> {
 		this.stopStatusUpdate()
-		this.log('debug', 'destroy')
 	}
 
 	async configUpdated(config: ModuleConfig): Promise<void> {
@@ -63,7 +62,6 @@ export class ModuleInstance extends InstanceBase<ModuleConfig> {
 	}
 
 	updateVariableDefinitions(): void {
-		this.log('info', 'Update variable definitions in')
 		UpdateVariableDefinitions(this)
 	}
 
@@ -95,7 +93,7 @@ export class ModuleInstance extends InstanceBase<ModuleConfig> {
 				},
 			)
 			.catch((error) => {
-				this.log('info', `Request command got error ${error}`)
+				this.log('error', `Request command got error ${error}`)
 				return error
 			})
 		return promise
@@ -121,14 +119,14 @@ export class ModuleInstance extends InstanceBase<ModuleConfig> {
 
 	async initializeStatusUpdate(): Promise<void> {
 		this.statusUpdateHandle = setInterval(() => {
-			;(async () => {
+			(async () => {
 				try {
 					if (this.updateRequestInProgress == false) {
 						this.updateRequestInProgress = true
 						await this.doStatusUpdate()
 					}
 				} catch (e) {
-					this.log('info', `Error occurred in interval update. ${e}`)
+					this.log('debug', `Error occurred in interval update. ${e}`)
 				} finally {
 					this.updateRequestInProgress = false
 				}

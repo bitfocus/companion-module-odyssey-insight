@@ -1,6 +1,6 @@
 {
-	"name": "Insight",
-	"version": "0.1.0",
+	"name": "odyssey-insight",
+	"version": "1.0.1",
 	"main": "dist/main.js",
 	"type": "module",
 	"scripts": {
@@ -16,7 +16,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/bitfocus/companion-module-your-module-name.git"
+		"url": "git+https://github.com/bitfocus/companion-module-odyssey-insight.git"
 	},
 	"engines": {
 		"node": "^22.14",

@@ -5,7 +5,6 @@ export function UpdateActions(self: ModuleInstance): void {
 		play_action: {
 			name: 'Play',
 			options: [],
-			//			callback: async (event) => {
 			callback: async () => {
 				self.sendCommand('Play')
 			},
@@ -13,35 +12,35 @@ export function UpdateActions(self: ModuleInstance): void {
 		stop_action: {
 			name: 'Stop',
 			options: [],
-			callback: async () => {
+			callback: () => {
 				self.sendCommand('Stop')
 			},
 		},
 		previous_action: {
 			name: 'Previous',
 			options: [],
-			callback: async () => {
+			callback: () => {
 				self.sendCommand('Previous')
 			},
 		},
 		next_action: {
 			name: 'Next',
 			options: [],
-			callback: async () => {
+			callback: () => {
 				self.sendCommand('Next')
 			},
 		},
 		pause_action: {
 			name: 'Pause',
 			options: [],
-			callback: async () => {
+			callback: () => {
 				self.sendCommand('Pause')
 			},
 		},
 		cue_action: {
 			name: 'Cue',
 			options: [],
-			callback: async () => {
+			callback: () => {
 				self.sendCommand('Cue')
 			},
 		},
